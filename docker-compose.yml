@@ -1,0 +1,11 @@
+version: '2.4'
+services:
+  zeek:
+    build:
+      context: containers/zeek
+      args:
+        ZEEK_VERSION: "3.2.1"
+    image: vzw_script:latest
+    volumes:
+      - "./working:/root/working"
+    tty: true
